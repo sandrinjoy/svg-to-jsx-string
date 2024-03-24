@@ -1,0 +1,44 @@
+{
+  "name": "svg-to-jsx-string",
+  "version": "0.1.0",
+  "description": "This can be used to convert an svg string to a jsx string.",
+  "main": "dist/svg-to-jsx-string.umd.js",
+  "jsnext:main": "dist/svg-to-jsx-string.esm.js",
+  "module": "dist/svg-to-jsx-string.esm.js",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && rollup -c",
+    "pretest": "npm run build",
+    "prepublish": "npm run lint",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "svg",
+    "jsx",
+    "react",
+    "parser",
+    "string"
+  ],
+  "author": "Sandrin Joy",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "assert": "^2.1.0",
+    "eslint": "^8.57.0",
+    "mocha": "^10.3.0",
+    "prettier": "^3.2.5",
+    "rollup": "^4.13.0",
+    "svg-parser": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandrinjoy/svg-to-jsx-string.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sandrinjoy/svg-to-jsx-string/issues"
+  }
+}
