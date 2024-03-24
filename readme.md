@@ -13,7 +13,7 @@ npm install svg-to-jsx-string
 ### Usage
 
 ```javascript
-import { svgToJsx } from "svg-to-jsx-string";
+import { svgToJsxString } from "svg-to-jsx-string";
 
-const jsxString = svgToJsx(svgString);
+const jsxString = svgToJsxString(svgString);
 ```

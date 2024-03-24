@@ -1,5 +1,5 @@
 import nodeResolve from "@rollup/plugin-node-resolve";
-
+import buble from "@rollup/plugin-buble";
 export default {
   input: "src/index.js",
   output: [
@@ -11,5 +11,12 @@ export default {
       sourcemap: true
     }
   ],
-  plugins: [nodeResolve()]
+  plugins: [
+    nodeResolve(),
+    buble({
+      transforms: {
+        dangerousForOf: true
+      }
+    })
+  ]
 };

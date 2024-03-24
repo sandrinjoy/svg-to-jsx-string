@@ -26,6 +26,7 @@
   "author": "Sandrin Joy",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-buble": "^1.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "assert": "^2.1.0",
     "eslint": "^8.57.0",

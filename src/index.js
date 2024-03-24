@@ -8,14 +8,13 @@ function _parseSVG(svg) {
   return parsedSVG.children[0];
 }
 function _conformSVG(parsedSVG) {
-  const conformedSVG = { ...parsedSVG };
-  conformedSVG.properties = sanitizeAttributes(conformedSVG.properties);
-  noUnSupportedTagNames(conformedSVG.children);
+  parsedSVG.properties = sanitizeAttributes(parsedSVG.properties);
+  noUnSupportedTagNames(parsedSVG.children);
 
-  conformedSVG.children = Array.isArray(conformedSVG.children)
-    ? conformedSVG.children.map((child) => _conformSVG(child))
-    : conformedSVG.children;
-  return conformedSVG;
+  parsedSVG.children = Array.isArray(parsedSVG.children)
+    ? parsedSVG.children.map((child) => _conformSVG(child))
+    : parsedSVG.children;
+  return parsedSVG;
 }
 function tagStartString(tagName, properties) {
   return `<${tagName} ${Object.entries(properties)
@@ -53,6 +52,5 @@ export function svgToJsxString(svgString) {
   const svgJson = _parseSVG(svgString);
   const conformedSVG = _conformSVG(svgJson);
   const { properties, children } = conformedSVG;
-  console.log(conformedSVG, properties, children);
   return _JsxComponentString("svg", properties, children);
 }

@@ -116,8 +116,7 @@ const sanitizeAttributes = function (attributes) {
       data[name] = attributes[name];
       return data;
     }, {});
-
-  return { ...allowed, ...custom };
+  return Object.assign({}, allowed, custom);
 };
 
 const noUnSupportedTagNames = function (children) {
