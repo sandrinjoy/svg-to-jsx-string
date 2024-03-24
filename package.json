@@ -1,6 +1,6 @@
 {
   "name": "svg-to-jsx-string",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This can be used to convert an svg string to a jsx string.",
   "main": "dist/svg-to-jsx-string.umd.js",
   "jsnext:main": "dist/svg-to-jsx-string.esm.js",
